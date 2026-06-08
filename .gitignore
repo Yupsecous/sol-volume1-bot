@@ -1,0 +1,6 @@
+node_modules
+.env
+package-lock.json
+src/uniconst.ts
+logs
+*.log
