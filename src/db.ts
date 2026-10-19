@@ -44,7 +44,7 @@ export const Wallet = mongoose.model(
 export const init = () => {
     return new Promise(async (resolve: any, reject: any) => {
         mongoose
-            .connect(`mongodb://localhost:27017/${process.env.DB_NAME}`)
+            .connect(`${process.env.MONGO_URL ?? "mongodb://localhost:27017"}/${process.env.DB_NAME}`)
             .then(() => {
                 console.log(`Connected to MongoDB "${process.env.DB_NAME}"...`);
 
